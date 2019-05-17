@@ -1,6 +1,3 @@
-body {
-  background-color: blanchedalmond;
-}
 
 #title {
   background-color: red;
@@ -8,4 +5,20 @@ body {
 
 #image-gallery{
   background-color: purple;
+}
+
+#color-selector {
+  background-color: green;
+}
+
+#size-selector {
+  background-color: beige;
+}
+
+#cart-favorite-buttons {
+  background-color: orange;
+}
+
+#description {
+  background-color: grey;
 }
