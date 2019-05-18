@@ -38,4 +38,5 @@ let save = data => {
   });
 };
 
+module.exports.Shoe = Shoe;
 // save(shoeData);

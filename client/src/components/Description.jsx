@@ -1,7 +1,21 @@
-import React from 'react';
+import React from "react";
 
-const Description = (props) => (
-  <div>THIS IS THE DESCRIPTION COMPONENT</div>
-);
+class Description extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      description: ""
+    };
+  }
+
+  componentDidMount() {
+    console.log("MOUNTED");
+  }
+
+  render() {
+    return <div>THIS IS THE DESCRIPTION</div>;
+  }
+}
 
 export default Description;

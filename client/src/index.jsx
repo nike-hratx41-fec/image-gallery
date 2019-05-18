@@ -1,4 +1,5 @@
 import React from "react";
+
 import ReactDOM from "react-dom";
 import ImageGallery from "./components/ImageGallery.jsx";
 import Title from "./components/Title.jsx";
@@ -12,5 +13,8 @@ ReactDOM.render(<Title />, document.getElementById("title"));
 ReactDOM.render(<ImageGallery />, document.getElementById("image-gallery"));
 ReactDOM.render(<ColorSelector />, document.getElementById("color-selector"));
 ReactDOM.render(<SizeSelector />, document.getElementById("size-selector"));
-ReactDOM.render(<CartFavoriteButtons />, document.getElementById("cart-favorite-buttons"));
+ReactDOM.render(
+  <CartFavoriteButtons />,
+  document.getElementById("cart-favorite-buttons")
+);
 ReactDOM.render(<Description />, document.getElementById("description"));
