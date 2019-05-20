@@ -3,7 +3,7 @@ console.log("ENV VARIABLES ", process.env.PORT);
 const express = require("express");
 const app = express();
 const {
-  Shoe
+  Shoe, dbRetrieve
 } = require("../database/index.js");
 const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
@@ -26,7 +26,6 @@ app.get("/api/:info/:sku", (req, res) => {
         };
       } else {
         responseData = shoe[info];
-        console.log(responseData);
       }
       res.json(responseData);
     })

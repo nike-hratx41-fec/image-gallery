@@ -47,15 +47,5 @@ const dbSave = data => {
   });
 };
 
-const dbRetrieve = (sku, info) => {
-  const responseData = {};
-  Shoe.findOne({
-    sku
-  })
-  .exec((err, shoe) => {
-
-  })
-}
 
 module.exports.Shoe = Shoe;
-// dbSave(shoeData);
