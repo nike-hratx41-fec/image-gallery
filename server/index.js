@@ -13,34 +13,24 @@ app.use(express.static(__dirname + "/../client/dist"));
 app.get("/api/:info/:sku", (req, res) => {
   const sku = req.params.sku;
   const info = req.params.info;
-  if (info === "title") {
-    Shoe.findOne({
-        sku
-      })
-      .exec((err, shoe) => {
-        const titleInfo = {
+  Shoe.findOne({
+      sku
+    })
+    .exec((err, shoe) => {
+      let responseData = {};
+      if (info === "title") {
+        responseData = {
           productName: shoe.productName,
           price: shoe.price,
           category: shoe.category
         };
-        res.json(titleInfo);
-      })
-  } else {
-    Shoe.findOne({
-        sku
-      })
-      .exec((err, shoe) => {
-        if (err) {
-          console.log("Error finding SHOE");
-        } else {
-          res.json(shoe[info]);
-
-
-        }
-      });
-    console.log(req.params.sku);
-  }
-});
+      } else {
+        responseData = shoe[info];
+        console.log(responseData);
+      }
+      res.json(responseData);
+    })
+}); 
 
 app.listen(port, () => {
   console.log("Ken's service listening on port, ", port);

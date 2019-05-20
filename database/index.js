@@ -32,9 +32,9 @@ let shoeSchema = mongoose.Schema({
   }]
 });
 
-let Shoe = mongoose.model("Shoe", shoeSchema);
+const Shoe = mongoose.model("Shoe", shoeSchema);
 
-let save = data => {
+const dbSave = data => {
   Shoe.insertMany(data, (err, response) => {
     if (err) {
       console.log("insertion error: ", err);
@@ -47,5 +47,15 @@ let save = data => {
   });
 };
 
+const dbRetrieve = (sku, info) => {
+  const responseData = {};
+  Shoe.findOne({
+    sku
+  })
+  .exec((err, shoe) => {
+
+  })
+}
+
 module.exports.Shoe = Shoe;
-// save(shoeData);
+// dbSave(shoeData);
