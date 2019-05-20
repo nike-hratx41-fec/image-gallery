@@ -21,9 +21,8 @@ class CartFavoriteButtons extends React.Component {
   render() {
     return (
       <div>
-        <Button name="add-cart" onClick={this.onClick}>Add to Cart</Button>
-        {/* <button name="add-cart" onClick={this.onClick}>Add to Cart</button>
-        <button name="favorite" onClick={this.onClick}>Favorite</button> */}
+        <Button name="add-cart" onClick={this.onClick} className='cart-favorite-button rounded-pill'>Add to Cart</Button>
+        <Button name="favorite" onClick={this.onClick} className='cart-favorite-button rounded-pill'>Favorite</Button>
       </div>
     );
   }

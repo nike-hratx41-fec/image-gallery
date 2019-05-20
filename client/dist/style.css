@@ -36,3 +36,16 @@ body {
   width: 35px;
   display: inline-block;
 }
+
+.size-button {
+  width: 183px;
+  height: 48;
+  margin: 2.5px;
+}
+
+.cart-favorite-button {
+  /* border-radius: 30%; */
+  width: 377px;
+  height: 50px;
+  display: block;
+}
