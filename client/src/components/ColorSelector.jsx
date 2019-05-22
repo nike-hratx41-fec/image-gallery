@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from 'axios';
+import { Button } from 'reactstrap';
 
 class ColorSelector extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class ColorSelector extends React.Component {
       .then(colors => {
         this.setState({ colors: colors.data });
       })
-      .catch(err => {});
+      .catch(err => { });
   }
 
   onClick(event) {
@@ -27,11 +28,11 @@ class ColorSelector extends React.Component {
   render() {
     return (
       <div>
-      <h3>Colors</h3>
         {this.state.colors.map((color, index) => {
           return (
-            <div onClick={this.onClick} className="color-block" key={index} style={{backgroundColor: color}} value={color}></div>
-            );
+
+            <Button onClick={this.onClick} className="color-block" key={index} style={{ backgroundColor: color }} value={color}></Button>
+          );
         })}
       </div>
     );

@@ -22,15 +22,14 @@ class Title extends React.Component {
           category: title.data.category
         });
       })
-      .catch(err => {});
+      .catch(err => { });
   }
   render() {
     return (
       <div>
-        <h3>Product Name</h3>
-        <div>{this.state.title}</div>
-        <div>${this.state.price}</div>
-        <div>Category: {this.state.category}</div>
+        <span>Category: {this.state.category}</span>
+        <span>${this.state.price}</span>
+        <h3>{this.state.title}</h3>
       </div>
     );
   }

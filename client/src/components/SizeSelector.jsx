@@ -29,7 +29,8 @@ class SizeSelector extends React.Component {
   render() {
     return (
       <div>
-        <h3>Sizes</h3>
+        <span>Select Size</span>
+        <span>Size Guide</span> <br/>
         {this.state.sizes.map((size, index) => {
           return (
             <Button color='bg-light' onClick={this.onClick} key={index} className="border size-button btn btn-light">{size}</Button>

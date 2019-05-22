@@ -22,7 +22,6 @@ class ImageGallery extends React.Component {
   render() {
     return (
       <div>
-        <h3>Images</h3>
         {this.state.images.map((image, index) => {
           return <img id="shoe-image" key={index} src={image} />;
         })}
