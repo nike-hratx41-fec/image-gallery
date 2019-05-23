@@ -27,9 +27,11 @@ class Title extends React.Component {
   render() {
     return (
       <div>
-        <span>Category: {this.state.category}</span>
-        <span>${this.state.price}</span>
-        <h3>{this.state.title}</h3>
+          <div className="title-grid">
+            <p>Basketball Shoe</p>
+            <p className="h5">{this.state.title}</p>
+            <p className="h6">${this.state.price}</p>
+        </div>
       </div>
     );
   }

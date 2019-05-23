@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/color-selector.css'
 import Axios from 'axios';
 import { Button } from 'reactstrap';
 
@@ -27,7 +28,7 @@ class ColorSelector extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='color-grid'>
         {this.state.colors.map((color, index) => {
           return (
 
