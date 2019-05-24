@@ -37,7 +37,7 @@ class ImageGallery extends React.Component {
           })}
         </div>
         <Modal isOpen={this.state.modal}>
-          <ModalBody id="modal-content">
+          <ModalBody>
             <div id="exit-modal">x</div>
             {this.state.images.map((image, index) => {
               return <img key={index} src={image} />
