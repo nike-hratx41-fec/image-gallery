@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from 'reactstrap';
+import '../styles/cartfavorite-buttons.css';
 
 class CartFavoriteButtons extends React.Component {
   constructor(props) {
@@ -21,8 +21,8 @@ class CartFavoriteButtons extends React.Component {
   render() {
     return (
       <div>
-        <Button name="add-cart" onClick={this.onClick} className='cart-favorite-button rounded-pill'>Add to Cart</Button>
-        <Button name="favorite" onClick={this.onClick} className='cart-favorite-button rounded-pill'>Favorite</Button>
+        <button type="button" className="btn btn-dark rounded-pill cart-button" onClick={this.onClick}>Add to cart</button>
+        <button type="button" className="btn btn-outline-dark rounded-pill favorite-button" onClick={this.onClick}>Favorite</button>
       </div>
     );
   }

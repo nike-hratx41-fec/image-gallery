@@ -30,14 +30,16 @@ class SizeSelector extends React.Component {
   render() {
     return (
       <div>
-        <span>Select Size</span>
-        <span>Size Guide</span> <br/>
+        <div className="size-title">
+          <p id="select-size">Select Size</p>
+          <p id="size-guide">Size Guide</p> <br />
+        </div>
         <div className="size-grid">
-        {this.state.sizes.map((size, index) => {
-          return (
-            <Button color='bg-light' onClick={this.onClick} key={index} className="border size-button btn btn-light">{size}</Button>
-          );
-        })}
+          {this.state.sizes.map((size, index) => {
+            return (
+              <Button color='bg-light' onClick={this.onClick} key={index} className="border size-button btn btn-light">{size}</Button>
+            );
+          })}
         </div>
       </div>
     );

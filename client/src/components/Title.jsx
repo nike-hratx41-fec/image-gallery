@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import '../styles/title.css'
 
 class Title extends React.Component {
   constructor(props) {
@@ -29,8 +30,8 @@ class Title extends React.Component {
       <div>
           <div className="title-grid">
             <p>Basketball Shoe</p>
+            <p id="price" className="h6">${this.state.price}</p>
             <p className="h5">{this.state.title}</p>
-            <p className="h6">${this.state.price}</p>
         </div>
       </div>
     );

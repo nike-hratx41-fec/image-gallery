@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import '../styles/description.css';
 
 class Description extends React.Component {
   constructor(props) {
