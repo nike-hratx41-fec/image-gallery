@@ -1,0 +1,8 @@
+#modal-content {
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+#exit-modal {
+    justify-self: end;
+}
