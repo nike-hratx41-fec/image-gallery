@@ -1,7 +1,7 @@
 import React from "react";
 import Axios from "axios";
-import { Modal, ModalHeader, ModalBody } from 'reactstrap';
-import '../styles/image-gallery.css';
+import { Modal, ModalHeader, ModalBody } from "reactstrap";
+import "../styles/image-gallery.css";
 
 class ImageGallery extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class ImageGallery extends React.Component {
       .then(images => {
         this.setState({ images: images.data });
       })
-      .catch(err => { });
+      .catch(err => {});
   }
 
   toggleModal() {
@@ -33,14 +33,21 @@ class ImageGallery extends React.Component {
       <div>
         <div>
           {this.state.images.map((image, index) => {
-            return <img id="shoe-image" onClick={this.toggleModal} key={index} src={image} />;
+            return (
+              <img
+                id="shoe-image"
+                onClick={this.toggleModal}
+                key={index}
+                src={image}
+              />
+            );
           })}
         </div>
         <Modal isOpen={this.state.modal}>
           <ModalBody>
             <div id="exit-modal">x</div>
             {this.state.images.map((image, index) => {
-              return <img key={index} src={image} />
+              return <img key={index} src={image} />;
             })}
           </ModalBody>
         </Modal>
