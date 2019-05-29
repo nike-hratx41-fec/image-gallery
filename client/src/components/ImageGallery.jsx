@@ -16,12 +16,25 @@ class ImageGallery extends React.Component {
     this.toggleModal = this.toggleModal.bind(this);
   }
 
-  componentDidMount() {
-    Axios.get(`${process.env.API_URL}/api/images/${this.state.sku}`)
+  fetchImageData(sku) {
+    Axios.get(`${process.env.API_URL}/api/images/${sku}`)
       .then(images => {
-        this.setState({ images: images.data });
+        this.setState({
+          sku: sku,
+          images: images.data
+        });
       })
       .catch(err => {});
+  }
+
+  componentDidMount() {
+    this.fetchImageData(this.state.sku);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.sku !== prevProps.sku) {
+      this.fetchImageData(this.props.sku);
+    }
   }
 
   toggleModal() {

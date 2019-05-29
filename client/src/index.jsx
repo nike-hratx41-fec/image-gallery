@@ -34,7 +34,7 @@ class App extends React.Component {
   }
 
   onClick(event) {
-    this.setState({ sku: this.state.textbox }, ()=>{
+    this.setState({ sku: this.state.textbox }, () => {
       console.log(this.state.sku);
     });
   }
